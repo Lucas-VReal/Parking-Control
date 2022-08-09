@@ -1,4 +1,4 @@
-# parking-controll
+# parking-control
 Um projeto Java com Spring para uma API que controla vagas de estacionamento num condomínio.
 
 Esse projeto têm por objetivo criar um CRUD utilizando Java com o Spring Framework.
