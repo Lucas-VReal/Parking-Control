@@ -3,11 +3,11 @@ Um projeto Java com Spring para uma API que controla vagas de estacionamento num
 
 Esse projeto têm por objetivo criar um CRUD utilizando Java com o Spring Framework.
 
-Gerenciador de Dependências: Maven
-Banco de Dados: PostgreSQL
-Versão do Spring Boot: 2.7.2
-Packing: Jar
-Versão Java: Java 11.0.13
+- Gerenciador de Dependências: Maven
+- Banco de Dados: PostgreSQL
+- Versão do Spring Boot: 2.7.2
+- Packing: Jar
+- Versão Java: Java 11.0.13
 
 O projeto foi construído utilizando a IDE Intellij e pode ser testado especificando o Database no "application-properties" e com o software Postman.
 
