@@ -1,7 +1,10 @@
-# parking-control
+# Parking-Control
+
 Um projeto Java com Spring para uma API que controla vagas de estacionamento num condomínio.
 
-Esse projeto têm por objetivo criar um CRUD utilizando Java com o Spring Framework.
+Esse projeto tem por objetivo criar um CRUD utilizando Java com o Spring Framework.
+
+Você pode criar um novo registro de vaga de estacionamento, buscar todas os registros cadastrados ou somente um específico e é possível atualizar os dados de um registro ou deletá-lo do sistema.
 
 - Gerenciador de Dependências: Maven
 - Banco de Dados: PostgreSQL
