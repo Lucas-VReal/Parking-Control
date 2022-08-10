@@ -9,8 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -28,20 +26,7 @@ public class ParkingSpotController {
 
     @PostMapping
     public ResponseEntity<Object> saveParkingSpot(@RequestBody @Valid ParkingSpotDto parkingSpotdto){
-        if(parkingSpotService.existsByLicensePlateCar(parkingSpotdto.getLicensePlateCar())){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: License Plate car is already in use!");
-        }
-        if(parkingSpotService.existsByParkingSpotNumber(parkingSpotdto.getParkingSpotNumber())){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Parking Spot Number is already in use!");
-        }
-        if(parkingSpotService.existsByApartmentAndBlock(parkingSpotdto.getApartment(), parkingSpotdto.getBlock())){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Parking Spot is already in use for this Apartment/Block!");
-        }
-
-        var parkingSpotModel = new ParkingSpotModel();
-        BeanUtils.copyProperties(parkingSpotdto, parkingSpotModel);
-        parkingSpotModel.setRegistrationDate(LocalDateTime.now(ZoneId.of("UTC")));
-        return ResponseEntity.status(HttpStatus.CREATED).body(parkingSpotService.save(parkingSpotModel));
+        return parkingSpotService.checksForSaveParkingSpot(parkingSpotdto);
     }
 
     @GetMapping
