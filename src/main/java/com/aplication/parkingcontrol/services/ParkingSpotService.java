@@ -4,7 +4,6 @@ import com.aplication.parkingcontrol.dtos.ParkingSpotDto;
 import com.aplication.parkingcontrol.models.ParkingSpotModel;
 import com.aplication.parkingcontrol.repositories.ParkingSpotRepository;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

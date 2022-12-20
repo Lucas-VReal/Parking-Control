@@ -4,12 +4,11 @@ import com.aplication.parkingcontrol.enums.RoleName;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
 @Table(name = "TB_ROLE")
-public class RoleModel implements Serializable, GrantedAuthority {
+public class RoleModel implements GrantedAuthority {
 
     public static final long serialVersionUID = 1L;
 
